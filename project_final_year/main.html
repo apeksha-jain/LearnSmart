@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LearnSmart</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" type="text/css" href="css_files/main.css">
+	  <link rel="shortcut icon" href="css_files/favicon.ico"/>
+</head>
+<body>
+	 <!--*******************navigation bar*******************--> 
+ <nav class="navbar navbar-inverse">
+ 	<div class="container-fluid">
+ 		<div class="navbar-header">
+ 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+ 			<a href="main.html" class="navbar-brand"><img src="css_files/images/logo.png" style="margin-top: -28%; border-radius: 50%;"></a>
+ 		</div>
+ 		<div class="collapse navbar-collapse" id="myNavbar">
+ 		<ul class="nav navbar-nav">
+ 			<li class="active"><a href="#home">Home</a></li>
+ 			<li><a href="#about">About</a></li>
+ 			<li><a href="#contact">Contact Us</a></li>
+ 		</ul>
+ 		<ul class="nav navbar-nav navbar-right">
+ 			<li><a href="register.html">Register<span class="glyphicon glyphicon-user"></span></a></li>
+ 			<li><a href="#">Help<i class="fa" style="font-size: 20px;">&#xf128;</i></a></li>
+ 		</ul>
+ 	</div>
+ 	</div>
+ </nav>
+  <!--*******************login form*******************-->
+   <div class="container-fluid">
+   <div class="row" id="home">
+   	<div class="col-sm-12">
+   		<div class="forms"><br><br>
+           <form method="post" action="Login.jsp">
+              <div class="form-group">
+                <label for="adminno" style="font-size:20px;color: black;margin-left: 10%;"><b>Admission Number</b></label>
+                <input type="text" class="form-control" id="adminno" name="adminno" required>
+              </div>
+              <div class="form-group">
+                <label for="psw" style="font-size:20px;color: black;margin-left: 10%;"><b>Password</b></label>
+                <input type="password" class="form-control" id="pwd" name="pwd" required>
+              </div>
+              <div class="row" style="margin-top: 2%;">
+              	<div class="col-sm-4"></div>
+              	<div class="col-sm-4"> <input type="submit" class="btn btn-success" value="Login" style="color: black; margin-left: 30%;width: 40%; margin-right: 30%;"></div>
+              	<div class="col-sm-4"></div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+              	<div class="col-sm-4"></div>
+              	<div class="col-sm-4"></div>
+              	<div class="col-sm-4"><a href="#" style="text-decoration: none; color: black;">Forgot Password?</a></div>
+              </div>
+           </form>
+   		</div>
+   	</div>
+   </div>
+   </div>
+   <!--*******************about section*******************-->
+   <div id="about" class="container">
+   	<div class="row">
+   		<div class="col-sm-12"><h1><u>LearnSmart</u></h1>
+   			<p>We are a next-gen Learning Management System (LMS) that delivers personalized learning experiences.
+   				<br>
+   				It is the learning platform that combines technical and experiential learning with skills management to maximize learner's performance.
+   				<br>
+   				It is a combination of E-learning System and Management System which is easy to use and helps in organising and tracking different events happening across the organisation.
+   			</p>
+   			<p><h2>WE CREATE! WE LEARN! WE INNOVATE! WE WORK!</h2></p>
+   		</div>
+   		<!--<div class="col-sm-5"></div>-->
+   	</div>
+   </div>
+   <!--*******************Contact section*******************-->
+   <div id="contact" class="container-fluid">
+   	<div class="row">
+   		<div class="col-sm-6" style="border-right:2px solid white;">
+   			Address:ABES Engineering College<br>
+			Campus -1, 19th KM Stone, NH-24,<br>
+			Ghaziabad U.P., India,<br>
+			Call : +91-120-7135112, 7135113
+   		</div>
+   		<div class="col-sm-6" id="icons">
+   			Follow Us
+   			<br>
+   			<a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+   			<a href="#" class="fa fa-linkedin"></a>
+   		</div>
+   	</div>
+   </div>
+   <!--*******************footer section*******************-->
+   <footer>Copyright <span class=" 	glyphicon glyphicon-copyright-mark"></span> 2018 LearnSmart. All rights reserved.</footer>
+</body>
+</html>

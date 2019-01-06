@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register for LEARNSMART</title>
+	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" type="text/css" href="css_files/register.css">
+	  <link rel="shortcut icon" href="css_files/favicon.ico"/>
+	   <script type="text/javascript">
+	  	//$(document).ready(function () { 
+		     //  $('input[name=course]').click(function () {
+				 //   if (this.id == "btech") {
+				   //     $("#Branch").show('slow');
+				   //} else {
+				     //   $("#Branch").hide('slow');
+				    //}
+				//});
+		 //});
+	  
+			function check(form){
+
+				var fn=form.fname.value;
+				var mn=form.mname.value;
+				var ln=form.lname.value
+				var pass = form.pswd.value;
+				var cpass=form.cpswd.value;
+                 
+				var checkn=/^[a-zA-Z]+$/;
+				if(!fn.match(checkn)){
+					// document.write(fn);
+					alert("Incorrect format for First name");
+					return false;
+				}
+				if(mn!="" && !mn.match(checkn)){
+					alert("Incorrect format for Middle name");
+					return false;
+					
+				}
+				if(!ln.match(checkn)){
+					alert("Incorrect format for Last name");
+					 return false;
+					}
+				var newcheck=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+				if (!pass.match(newcheck)) {
+					alert("Incorrect format");
+					
+					 return false;
+				}
+				if(cpass!=pass)
+				{
+					alert("Password do not match");
+					
+					 return false;
+				}
+				alert("form submitted successfully");
+				return true;
+			}
+	  </script>
+</head>
+<body>
+	<!--*******************navigation bar*******************-->
+		<nav class="navbar navbar-inverse">
+		 	<div class="container-fluid">
+		 		<div class="navbar-header">
+		 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>                        
+				      </button>
+		 			<a href="main.html" class="navbar-brand"><img src="css_files/images/logo.png" style="margin-top: -28%; border-radius: 50%;"></a>
+		 		</div>
+		 		<div class="collapse navbar-collapse" id="myNavbar">
+		 		<ul class="nav navbar-nav">
+		 			<li class="active"><a href="main.html">Home</a></li>
+		 			<li><a href="main.html#about">About</a></li>
+		 			<li><a href="main.html#contact">Contact Us</a></li>
+		 		</ul>
+		 		<ul class="nav navbar-nav navbar-right">
+		 			<li><a href="main.html">LogIn<span class="glyphicon glyphicon-user"></span></a></li>
+		 			<li><a href="#">Help<i class="fa" style="font-size: 20px;">&#xf128;</i></a></li>
+		 		</ul>
+		 	</div>
+		 	</div>
+		 </nav>
+		  <!--*******************registration form*******************-->
+		   <div class="container-fluid">
+			   <div class="row" id="home">
+			   	<div class="col-sm-3"></div>
+			   	<div class="col-sm-6" id="col">
+			   	 <form id="register_form"  method="post" action="Register.jsp" onsubmit="return check(this)">
+			   	 	<span class="header"><h2 style="color: black;">LearnSmart</h2>
+			   		<p><h3 style="color: black;">Create your LearnSmart Account</h3></p><p>to continue to LearnSmart</p></span>
+			   		<div class="form-group">
+			   			<div class="row">
+			   				<div class="col-sm-4">
+			   					<label for="fname">First Name</label>
+			   					<input type="text" name="fname" id="fname"  placeholder="" required/>
+			   				</div>
+			   				<div class="col-sm-4">
+			   					<label for="mname">Middle Name</label>
+			   					<input type="text" name="mname" id="mname"  placeholder="" />
+			   				</div>
+			   				<div class="col-sm-4">
+			   					<label for="lname">Last Name</label>
+			   					<input type="text" name="lname" id="lname"  placeholder="" required/>
+			   				</div>
+			   			</div>
+			   			<div class="row">
+			   				<div class="col-sm-6">
+			   					<label for="course">Course</label>
+			   					<br>
+			   					<label class="radio-inline">
+							      <input type="radio" name="course" id="btech" value="btech" required/><b>B.Tech</b>
+							    </label>
+							    <label class="radio-inline">
+							      <input type="radio" name="course" id="mba" value="mba" required/><b>M.B.A</b>
+							    </label>
+							    <label class="radio-inline">
+							      <input type="radio" name="course" id="mca" value="mca" required/><b>M.C.A</b>
+							    </label>
+			   				</div>
+			   				<div class="col-sm-6">
+			   					<label for="mno">Mobile Number(XXXXXXXXXX)</label><br>
+			   					<input type="text" name="mno" id="mno" placeholder="" pattern="^\d{10}$" required/>
+			   				</div>
+			   			</div>
+			   			<div class="row">
+			   				<div class="col-sm-6" id="Branch">
+			   					<label for="branch"><b>Branch</b></label><br>
+			   					<input type="text" name="branch" id="branch" placeholder="" required/>
+			   				</div>
+			   				<div class="col-sm-6">
+			   					<label for="email">Email(please enter college id only)</label><br>
+			   					<input type="email" name="email" id="email" placeholder="" pattern="^[a-z0-9](\.?[a-z0-9]){9,}@abes\.ac\.in$" required style="width: 80%;"/>
+			   				</div>
+			   			</div>
+			   			<br>
+			   			(NOTE: Choose a password with at least one number, one lowercase and one uppercase letter and having at least six characters.)
+                        <div class="row">
+                        	<div class="col-sm-4">
+                        		<label for="adminno">Admission No.</label><br>
+                        		<input type="text" name="adminno" id="adminno" placeholder=""  required/>
+                        	</div>
+                        	<div class="col-sm-4">
+                        		<label for="pswd">Password</label><br>
+			   					<input type="password" name="pswd" id="pswd" placeholder="" required/>
+                        	</div>
+                        	<div class="col-sm-4">
+                        		<label for="cpswd">Confirm Password</label><br>
+			   					<input type="password" name="cpswd" id="cpswd"  placeholder="" required/>
+                        	</div>
+                        </div>
+			   		</div>
+			   		<!-- <button type="submit"  class="btn btn-info" value="SUBMIT" style="margin:auto;color: black; height: 30px; width: 80px;" onclick="check()"></button> -->
+			   		<input type="submit" value="GO">
+			   	 </form>
+			   	</div>
+			   	<div class="col-sm-3"></div>
+			   </div>
+		    </div>
+</body>
+</html>

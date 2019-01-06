@@ -1,0 +1,86 @@
+body{
+	overflow-x: hidden;
+}
+#home{
+	min-height: 600px;
+    min-width: 100%;
+    /*border: 5px solid blue;*/
+    margin-top: -1.5%;
+    background-image: url('images/back.jpg');
+    background-position: center;
+    background-size: cover;/*
+    background-size: 100% 100%;*/
+}
+.forms{
+	min-height: 400px;
+	width: 40%;
+	margin-left: 30%;
+	margin-right: 30%;
+    margin-top:100px;
+    margin-bottom: 100px; 
+	background-color: grey;
+	opacity: 0.8;
+	box-shadow: 5px 5px 5px black;
+}
+.form-group input{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 2%;
+}
+/* Set a style for the submit button */
+/*.button2{
+    background-color: #66b3ff;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.button2:hover {
+    opacity: 1;
+}*/
+#about .col-sm-12{
+	background-color: #ffaa00;
+	min-height: 275px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	text-align: center;
+	font-size: 18px;
+}
+#contact{
+	background-color: #404040;
+	min-height: 150px;
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	padding: 25px;
+}
+#contact .fa{
+	padding: 15px;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border-radius:50%;
+    background-color: white;
+    color: black;
+    margin-top: 1%;
+    text-align: center;
+}
+footer{
+	background-color: #404040;
+	color: white;
+	text-align: center;
+}
+
+#icons a{
+	padding-top:-10px;
+}
+@media only screen and (max-width:768px){
+	.forms{
+		width: 100%;
+		margin-left: -0%;
+	}
+}
